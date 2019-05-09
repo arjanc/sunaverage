@@ -2,7 +2,7 @@
   "name": "sun-average",
   "version": "1.0.0",
   "description": "Giving a average of sun energy per zipcode.",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node ./server/index.js",
     "clean": "rm -rf build && mkdir build",
