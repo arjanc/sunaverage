@@ -9,7 +9,7 @@
     "build-babel": "babel -d ./build ./server -s",
     "build": "npm run clean && npm run build-babel",
     "start": "npm run build && node ./build/index.js",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Arjan Ceelen",
   "license": "MIT",
