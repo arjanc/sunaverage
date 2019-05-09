@@ -4,7 +4,11 @@
   "description": "Giving a average of sun energy per zipcode.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js",
+    "dev": "nodemon --exec babel-node ./server/index.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./server -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/index.js",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "author": "Arjan Ceelen",
@@ -19,13 +23,15 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-graphql": "^0.8.0",
-    "graphql": "^14.2.1",
+    "graphql": "^14.3.0",
     "graphql-tools": "^4.0.4",
     "merge-graphql-schemas": "^1.5.8",
-    "mongoose": "^5.5.5",
+    "mongoose": "^5.5.7",
     "nodemon": "^1.19.0"
   },
   "devDependencies": {
-    "@babel/node": "^7.2.2"
+    "@babel/node": "^7.2.2",
+    "babel-core": "^7.0.0-0",
+    "babel-polyfill": "^6.26.0"
   }
 }

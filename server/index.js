@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import express from 'express';
 import expressGraphQL from 'express-graphql';
 import mongoose from 'mongoose';
@@ -35,11 +36,11 @@ app.use(
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.use(express.static(path.join(__dirname, './../client/build')));
 
   // Handle React routing, return all request to React app
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, './../client/build', 'index.html'));
   });
 }
 
