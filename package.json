@@ -4,8 +4,7 @@
   "description": "Giving a average of sun energy per zipcode.",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon --exec babel-node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node index.js",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "author": "Arjan Ceelen",
