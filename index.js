@@ -33,7 +33,7 @@ app.use(
   })
 );
 
-// if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')));
 
@@ -41,6 +41,6 @@ app.use(
   app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   });
-// }
+}
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
