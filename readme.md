@@ -3,3 +3,8 @@
  https://medium.freecodecamp.org/how-to-set-up-a-graphql-server-using-node-js-express-mongodb-52421b73f474
 
  https://github.com/leonardomso/graphql-mongodb-server/blob/master/graphql/resolvers/User/index.js
+ 
+ #deploy to Heroku
+ ```
+ $ git push heroku master
+ ```
