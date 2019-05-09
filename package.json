@@ -2,13 +2,13 @@
   "name": "sun-average",
   "version": "1.0.0",
   "description": "Giving a average of sun energy per zipcode.",
-  "main": "server/index.js",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node ./server/index.js",
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./ ./server -s",
     "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./index.js",
+    "start": "npm run build && node index.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "Arjan Ceelen",
