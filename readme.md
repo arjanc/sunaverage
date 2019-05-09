@@ -8,3 +8,8 @@
  ```
  $ git push heroku master
  ```
+ 
+ ## testing production build
+ ```
+ $ NODE_ENV=production npm run start
+ ```
