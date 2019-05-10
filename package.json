@@ -1,19 +1,7 @@
 {
-  "name": "sun-average",
-  "version": "1.0.0",
-  "description": "Giving a average of sun energy per zipcode.",
-  "main": "server/index.js",
-  "scripts": {
-    "dev": "nodemon --exec babel-node ./server/index.js",
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./server -s",
-    "build-invalid": "npm run clean && npm run build-babel",
-    "start-invalid": "npm run build && node ./build/index.js",
-    "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
-  },
-  "author": "Arjan Ceelen",
-  "license": "MIT",
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
@@ -23,17 +11,47 @@
     "compression": "^1.7.4",
     "concurrently": "^4.1.0",
     "cors": "^2.8.5",
-    "express": "^4.16.4",
     "express-graphql": "^0.8.0",
     "graphql": "^14.3.0",
     "graphql-tools": "^4.0.4",
     "merge-graphql-schemas": "^1.5.8",
     "mongoose": "^5.5.7",
-    "nodemon": "^1.19.0"
+    "@material-ui/core": "^3.9.3",
+    "apollo-boost": "^0.3.1",
+    "express": "^4.16.4",
+    "graphql-tag": "^2.10.1",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.5",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
   },
   "devDependencies": {
     "@babel/node": "^7.2.2",
     "babel-core": "^7.0.0-0"
   },
-  "heroku-run-build-script": true
+  "scripts": {
+    "start-server": "node build/server.js",
+    "start-client-dev": "react-scripts start",
+    "start": "npm run start-server",
+    "build-server": "babel -d ./build ./server -s",
+    "build": "react-scripts build && npm run build-server",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:4000"
 }

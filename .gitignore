@@ -1,48 +1,23 @@
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.orig
-*.log
-*.rej
-*.swo
-*.swp
-*.vi
-*~
-*.sass-cache
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# OS or Editor folders
-Thumbs.db
-.cache
-.project
-.settings
-.tmproj
-*.esproj
-nbproject
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# Folders to ignore
-.hg
-.svn
-.CVS
-intermediate
-publish
-build
-public
+# testing
+/coverage
 
-# Editors
-*.sublime*
-*.vscode*
-.idea
+# production
+# /build
 
-# Node build artifacts
-npm-debug.log
-node_modules
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Logs
-logs
-*.log
 npm-debug.log*
-
-typings/
-lib/*.js
-test/*.js
-*.map
+yarn-debug.log*
+yarn-error.log*
