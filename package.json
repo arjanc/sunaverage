@@ -9,7 +9,8 @@
     "build-babel": "babel -d ./build ./server -s",
     "build-invalid": "npm run clean && npm run build-babel",
     "start-invalid": "npm run build && node ./build/index.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "author": "Arjan Ceelen",
   "license": "MIT",
@@ -33,5 +34,6 @@
   "devDependencies": {
     "@babel/node": "^7.2.2",
     "babel-core": "^7.0.0-0"
-  }
+  },
+  "heroku-run-build-script": true
 }
