@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import './App.css';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: '/graphql',
 });
 
 function App() {
