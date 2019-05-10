@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Heroku
+
+### `deploy`
+```
+$ git push heroku master
+```
+
+### `watch log`
+```
+$ heroku logs --tail
+```
 ## Available Scripts
 
 In the project directory, you can run:
